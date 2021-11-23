@@ -35,3 +35,10 @@ def main():
     log = login()
     if log == True:
          menu()
+
+
+
+Initial code made, see initial code file;
+still need to incorporate med list, and ensure log in accuracy/functioning
+Still need therapies and timeline. 
+Forked an app creation page to personal github account. 
