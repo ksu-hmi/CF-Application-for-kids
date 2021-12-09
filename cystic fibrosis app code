@@ -1,0 +1,82 @@
+'''
+development for the Time A-Cyst app
+how will the app help patients and their parents?
+a login needs to be established for each patient 
+'''
+
+#add constants next
+admins = {'patient_last_name':'parents_last_name'}
+
+#Like the admins above is a dictionary but of patients and parents. In this case, eachh patient's first name is a key. 
+patients = {'Hannah': [New Patient],
+            'Sally':[Existing Patient],
+            'Nboke':[Existing]}
+# define function
+
+def show_data():
+    data = cycsticfibrosis.patients
+    patient_name = input('Patient name:')
+    parent_name = input('Parent name:' )
+    treatment = data.get_treatment_by_patient_name(patient_name)
+    regime = treatment['New Patient']
+    pt2.insert(0,current_schedule_plan)
+    regime = treatment ['Old Patient']
+    pt3.insert(0,develop_schedule_plan)
+    print(status)
+    
+    else:
+        print('Patient not found. Please check your spelling or go back and add if new.')
+
+#removing patients who no longer use app
+def removePatients():
+    nameToRemove = input('Who do you want to remove? ')
+    if nameToRemove in patients:
+        print('Removing '+nameToRemove)
+        del patients[nameToRemove]
+        print(patients)
+    else:
+        print('Patient not found.')
+
+def main():
+    print("User: " + login)
+    #What a patient or the parent will see once they have logged in to the app successfully.
+    print("""
+    Welcome to Time A-Cyst
+    [1] - New Patient
+    [2] - Existing Patient
+    [3] - Universal cycsticfibrosis regime
+    [4] - Modified cysticfibrosis regime
+    [5] - Exit
+    """)
+
+   action = input('How to develop new patient regime? (Enter a number) ')
+    #Here we process their choice of what they want to do.
+    if action == '1':
+        #print('1 selected')
+        enterNewPatient()
+    elif action == '2':
+        #print('2 selected')
+        enterExistingPatient()
+    elif action == '3':
+        #print('3 selected')
+        enterUniversalcysticfribrosisregime
+    elif action == '5':
+        #print('5 selected')
+        exit()
+    else:
+        print('Valid option not selected.') #need to cause it to reprompt
+
+# How to login to Time A-Cyst app
+login = input('Username: ')
+
+if login in app:
+    password = input('Patient_last_name: ')
+    if app[login] == Patient_last_name:
+        print('Welcome,',login)
+        #now run the code
+        while True:
+            main()
+    else:
+        print('Invalid password.')
+else:
+    print('Invalid user.')
